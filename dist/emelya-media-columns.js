@@ -441,7 +441,7 @@ class EmelyaMediaColumns extends LitElement {
     }));
   }
 
-  /* ── TV Actions ── */
+  /* TV Actions */
   toggleTv() {
     const entity = this.config?.tv;
     if (!entity || !this.hass?.states?.[entity]) return;
@@ -505,7 +505,7 @@ class EmelyaMediaColumns extends LitElement {
     });
   }
 
-  /* ── SVG Icons ── */
+  /* SVG Icons */
   _iconPower() {
     return html`
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -862,7 +862,7 @@ class EmelyaMediaColumnsEditor extends LitElement {
     ]);
   }
 
-  /* ── Нормализация MIME для HA API ── */
+  /* Нормализация MIME для HA API */
   _normalizeFileForUpload(file) {
     const unsupportedByHA = ["image/avif", "image/jxl", "image/heic", "image/heif"];
     if (unsupportedByHA.includes(file.type)) {
